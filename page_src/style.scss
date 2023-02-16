@@ -1,0 +1,29 @@
+body {
+	margin: 0px;
+}
+
+.header {
+	position: relative;
+	width: 100vw;
+	height: 5rem;
+	background-color: #222;
+	color: #ddd;
+	display: flex;
+	flex-direction: row;
+}
+
+.link-btn {
+	width: 5rem;
+	height: 3rem;
+	border-radius: 2rem;
+	border: #6dd 5px solid;
+	background-color: #359;
+	color: #fff;
+}
+
+.ctop {
+	position: absolute;
+	top: 50%;
+	right: 1rem;
+	transform: translateY(-50%);
+}
