@@ -5,18 +5,54 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="style.css" />
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="img/128.png" type="image/x-icon">
 	<title>Social Media Site</title>
 </head>
 
 <body>
-	<div class="header">
-		<h1>A Site</h1>
-		<button class="link-btn ctop" onclick="window.location.href='login.html'">Login</button>
+	<div class="sidebar-container">
+		<nav class="sidebar">
+			<button class="sidebar-item" onclick="window.location.href='profile.html'">
+				<div class="si-icon">
+					<img src="img/64.png" alt="">
+				</div>
+				<div class="si-label">Profile</div>
+			</button>
+
+			<button class="sidebar-item" onclick="window.location.href='index.html'">
+				<div class="si-icon">
+					<img src="img/64.png" alt="">
+				</div>
+				<div class="si-label">Home</div>
+			</button>
+
+			<button class="sidebar-item" onclick="window.location.href='settings.html'">
+				<div class="si-icon">
+					<img src="img/64.png" alt="">
+				</div>
+				<div class="si-label">Settings</div>
+			</button>
+		</nav>
 	</div>
-	<button class="link-btn" onclick="window.location.href='settings.html'">Setting</button>
+
+	<div class="content">
+		<div class="post-card">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laborum odio facilis ullam mollitia sunt, blanditiis
+			ea eveniet sapiente incidunt eum pariatur odit voluptate exercitationem minus repellat necessitatibus beatae est.
+		</div>
+		<div class="post-card">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, laborum fugiat. Architecto, repellat rem. Magnam
+			blanditiis velit ipsa, nesciunt doloremque labore molestiae, autem iure laboriosam eos exercitationem ut at in!
+		</div>
+	</div>
+
+	<!-- <div class="header">
+		<h1>A Site</h1>
+		<button class="link-btn" onclick="window.location.href='login.html'">Login</button>
+		<button class="link-btn" onclick="window.location.href='settings.html'">Settings</button>
+	</div>
 	<button class="link-btn" onclick="window.location.href='about.html'">About</button>
-	<div class="content"></div>
+	<div class="content"></div> -->
 </body>
 
 </html>
