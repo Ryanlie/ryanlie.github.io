@@ -2,12 +2,12 @@ lockfileVersion: 5.4
 
 specifiers:
   concurrently: ^7.6.0
-  sass: ^1.58.1
+  sass: ^1.58.3
   servor: ^4.0.2
 
 dependencies:
   concurrently: 7.6.0
-  sass: 1.58.1
+  sass: 1.58.3
   servor: 4.0.2
 
 packages:
@@ -100,7 +100,7 @@ packages:
       spawn-command: 0.0.2-1
       supports-color: 8.1.1
       tree-kill: 1.2.2
-      yargs: 17.6.2
+      yargs: 17.7.1
     dev: false
 
   /date-fns/2.29.3:
@@ -214,8 +214,8 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /sass/1.58.1:
-    resolution: {integrity: sha512-bnINi6nPXbP1XNRaranMFEBZWUfdW/AF16Ql5+ypRxfTvCRTTKrLsMIakyDcayUt2t/RZotmL4kgJwNH5xO+bg==}
+  /sass/1.58.3:
+    resolution: {integrity: sha512-Q7RaEtYf6BflYrQ+buPudKR26/lH+10EmO9bBqbmPh/KeLqv8bjpTNqxe71ocONqXq+jYiCbpPUmQMS+JJPk4A==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
@@ -307,8 +307,8 @@ packages:
     engines: {node: '>=12'}
     dev: false
 
-  /yargs/17.6.2:
-    resolution: {integrity: sha512-1/9UrdHjDZc0eOU0HxOHoS78C69UD3JRMvzlJ7S79S2nTaWRA/whGCTV8o9e/N/1Va9YIV7Q4sOxD8VV4pCWOw==}
+  /yargs/17.7.1:
+    resolution: {integrity: sha512-cwiTb08Xuv5fqF4AovYacTFNxk62th7LKJ6BL9IGUpTJrWoU7/7WdQGTP2SjKf1dUNBGzDd28p/Yfs/GI6JrLw==}
     engines: {node: '>=12'}
     dependencies:
       cliui: 8.0.1

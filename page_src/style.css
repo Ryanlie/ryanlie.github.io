@@ -1,59 +1,58 @@
 :root {
-  font-size: 120%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #eeeeee;
 }
 
 body {
-  background-color: #202020;
+  background-color: #212529;
   margin: 0px;
-  display: grid;
-  grid-template-columns: 1fr 50ch 1fr;
-  column-gap: 2ch;
 }
 
-.sidebar {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.right {
+  float: right;
 }
 
-.sidebar-item {
-  display: flex;
-  flex-direction: row;
-  background: none;
-  border: none;
-  width: auto;
-  height: fit-content;
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #3c3f43;
 }
-
-.si-label {
-  font-size: 150%;
+.navbar a {
+  display: inline-block;
+  padding: 1rem;
+  color: slategray;
+  text-decoration: none;
+  font-size: 120%;
+}
+.navbar a[aria-current=page] {
   color: white;
-  text-align: left;
-  visibility: none;
+  text-decoration: underline;
 }
-.si-label:hover, .si-label:active, .si-label:focus {
-  visibility: visible;
+.navbar a:hover {
+  text-decoration: underline;
+  color: white;
 }
 
 .content {
-  height: 100vh;
-  box-sizing: border-box;
+  margin: auto;
+  width: 70ch;
   overflow-y: scroll;
-  overflow-x: wrap;
-  border-radius: 1rem;
+  border-inline: 1px #fff dotted;
 }
 
-.post-card {
-  background-color: #404040;
+.post {
+  background-color: #181818;
   border-radius: 1rem;
   margin: 1rem;
   padding: 1rem;
   overflow: wrap;
-  text-align: justify;
+}
+
+.poster img {
+  vertical-align: middle;
+}
+.poster span {
+  vertical-align: middle;
 }
 
 /*# sourceMappingURL=style.css.map */
