@@ -1,20 +1,18 @@
 {
-  "name": "ryanlie.github.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently --kill-others \"pnpm run sass\" \"pnpm run servor\"",
-    "sass": "sass --watch page_src/style.scss page_src/style.css",
-    "servor": "servor --reload"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "concurrently": "^7.6.0",
-    "sass": "^1.58.3",
-    "servor": "^4.0.2"
-  }
+	"name": "ryanlie.github.io",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "concurrently --kill-others \"sass --watch page_src/style.scss page_src/style.css\" \"servor --reload page_src/\""
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"concurrently": "^7.6.0",
+		"sass": "^1.58.3",
+		"servor": "^4.0.2"
+	}
 }

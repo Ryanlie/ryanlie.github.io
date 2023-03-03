@@ -53,11 +53,29 @@ body {
 
 .poster {
 	img {
-		// align-items: center;
-		// align-self: center;
 		vertical-align: middle;
+		border-radius: 50%;
+		border: 1px white solid
 	}
+
 	span {
 		vertical-align: middle;
+		text-decoration: underline;
+	}
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	vertical-align: middle;
+	h1 {
+		font-size: 200%;
+	}
+	* {
+		font-size: 120%;
+		padding: 0.7rem 1rem;
+		margin: 1rem;
+		border-radius: 1rem;
 	}
 }
