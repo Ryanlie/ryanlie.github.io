@@ -5,36 +5,64 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Pager ~ Profile</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="shortcut icon" href="img/plane_w.svg" type="image/x-icon">
+
+  <style>
+    :root {
+      background-color: #212529;
+    }
+  </style>
+
   <script src="jquery-3.6.3.min.js"></script>
-  <title>Pager ~ Profile</title>
 </head>
 
 <body>
-  <script>
-    $(document).ready(() => {
-      if (localStorage.getItem("isLoggedIn")) {
-        $("#logininfo").html("Logged in as \"" + localStorage.getItem("username") + "\"");
-      } else {
-        $("#logininfo").html("Not Logged in, please login")
-      };
-    })
-  </script>
-
   <nav class="navbar">
     <a href="home.html">Home</a>
-    <a href="login.html">Login</a>
     <a href="profile.html" class="right" aria-current="page">Profile</a>
     <a href="settings.html" class="right">Settings</a>
     <a href="about.html" class="right">About</a>
   </nav>
 
   <div class="content">
-    <h1 id="logininfo"></h1>
+    <div id="logininfo">
+      <h1></h1>
+      <button onclick="localStorage.clear(); location.reload()">Logout</button>
+    </div>
+    <form id="loginform">
+      <h1>Login</h1>
+      <input type="text" name="username" id="username" placeholder="Username" required>
+      <input type="password" name="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
   </div>
 
-  <button onclick="localStorage.clear(); location.reload()">Logout</button>
+  <script>
+    //  Hide if Logged in
+    $(document).ready(() => {
+      if (localStorage.getItem("isLoggedIn")) {
+        $("#loginform").hide();
+        $("#logininfo>h1").html("Logged in as \"" + localStorage.getItem("username") + "\"");
+      } else {
+        $("#logininfo").hide();
+        $("#loginform").submit((event) => {
+          event.preventDefault();
+
+          const username = $('#username').val();
+          const password = $('#password').val();
+
+          localStorage.clear();
+          localStorage.setItem("isLoggedIn", true);
+          localStorage.setItem("username", username);
+
+          window.location.href = "home.html"
+        })
+      };
+    })
+  </script>
 </body>
 
 </html>

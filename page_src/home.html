@@ -5,16 +5,29 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Pager ~ Home</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="shortcut icon" href="img/plane_w.svg" type="image/x-icon">
+
+  <style>
+    :root {
+      background-color: #212529;
+    }
+  </style>
+
   <script src="jquery-3.6.3.min.js"></script>
-  <title>Pager ~ Home</title>
+  <script>
+    //  Redirect if Logged in
+    if (!localStorage.getItem("isLoggedIn")) {
+      window.location.href = "profile.html"
+    }
+  </script>
 </head>
 
 <body>
   <nav class="navbar">
     <a href="home.html" aria-current="page">Home</a>
-    <a href="login.html">Login</a>
     <a href="profile.html" class="right">Profile</a>
     <a href="settings.html" class="right">Settings</a>
     <a href="about.html" class="right">About</a>
