@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Pager ~ Home</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="shortcut icon" href="img/plane_w.svg" type="image/x-icon">
+  <title>Ryanlie's Profile</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="shortcut icon" href="../../img/plane_w.svg" type="image/x-icon">
 
   <style>
     :root {
@@ -16,10 +16,9 @@
     }
   </style>
 
-  <script src="jquery-3.6.3.min.js"></script>
+  <script src="../../jquery-3.6.3.min.js"></script>
   <script>
-    //  Redirect if Logged in
-    if (!localStorage.getItem("isLoggedIn")) {
+    if (localStorage.getItem("isLoggedIn") != "true") {
       window.location.href = "profile.html"
     }
   </script>
@@ -34,9 +33,17 @@
   </nav>
 
   <div class="content">
+    <div class="infobox">
+      <div class="poster">
+        <img src="banner.png" alt="">
+        <img src="pfp.png" alt="">
+        <h1>Ryanlie</h1>
+      </div>
+    </div>
+
     <div class="post">
       <div class="poster">
-        <img src="img/plane_w.svg" width="30px" height="30px">
+        <img src="../../img/plane_w.svg" width="30px" height="30px">
         <span>Poster Name</span>
       </div>
       <div class="card-content">
@@ -48,7 +55,7 @@
 
     <div class="post">
       <div class="poster">
-        <img src="img/plane_w.svg" width="30px" height="30px">
+        <img src="../../img/plane_w.svg" width="30px" height="30px">
         <span>Poster Name</span>
       </div>
       <div class="card-content">
@@ -60,7 +67,7 @@
 
     <div class="post">
       <div class="poster">
-        <img src="img/plane_w.svg" width="30px" height="30px">
+        <img src="../../img/plane_w.svg" width="30px" height="30px">
         <span>Poster Name</span>
       </div>
       <div class="card-content">
@@ -72,7 +79,7 @@
 
     <div class="post">
       <div class="poster">
-        <img src="img/plane_w.svg" width="30px" height="30px">
+        <img src="../../img/plane_w.svg" width="30px" height="30px">
         <span>Poster Name</span>
       </div>
       <div class="card-content">

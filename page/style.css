@@ -8,6 +8,15 @@ body {
   margin: 0px;
 }
 
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 120%;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 .right {
   float: right;
 }
@@ -21,16 +30,10 @@ body {
   display: inline-block;
   padding: 1rem;
   color: slategray;
-  text-decoration: none;
-  font-size: 120%;
 }
 .navbar a[aria-current=page] {
   color: white;
   text-decoration: underline;
-}
-.navbar a:hover {
-  text-decoration: underline;
-  color: white;
 }
 
 .content {

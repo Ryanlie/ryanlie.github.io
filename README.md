@@ -1,2 +1,6 @@
 # Social Media Site
-## Work In Progress
+Links: 
+
+[Github](https://github.com/ryanlie/ryanlie.github.io)
+
+[Website](https://ryanlie.github.io)
