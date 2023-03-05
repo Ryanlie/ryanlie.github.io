@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title></title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="img/plane_w.svg" type="image/x-icon">
+
+  <style>
+    :root {
+      background-color: #212529;
+    }
+  </style>
+
+  <script src="../jquery-3.6.3.min.js"></script>
+  <script>
+    if (localStorage.getItem("isLoggedIn") != "true") {
+      window.location.href = "profile.html"
+    }
+  </script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="home.html">Home</a>
+    <a href="profile.html" class="right">Profile</a>
+    <a href="settings.html" class="right">Settings</a>
+    <a href="about.html" class="right">About</a>
+  </nav>
+
+  <div id="content">
+    <div class="infobox">
+      <img class="banner" src="img/banner.png" />
+      <div class="poster-info">
+        <div class="poster-info">
+          <img src="img/plane_w.svg" width="30px" height="30px">
+          <span>
+            <p id="poster-label"></p>
+          </span>
+        </div>
+      </div>
+      <!-- Populated using jQuery from "post-data.json" -->
+    </div>
+
+    <script>
+      $(document).ready(() => {
+        var queryParams = {};
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+
+        for (var i = 0; i < vars.length; i++) {
+          var pair = vars[i].split("=");
+          queryParams[pair[0]] = decodeURIComponent(pair[1]);
+        }
+
+        $('title').text(queryParams.user + '\'s user page');
+        $('#poster-label').text(queryParams.user);
+
+        $.getJSON('post-data.json', (data) => {
+          $.each(data, (index, post) => {
+            if (queryParams.user == post.username) {
+              var postHtml = '<div class="post">';
+              postHtml += '<div class="poster-info">';
+              postHtml += '<img src="img/plane_w.svg" width="30px" height="30px" />';
+              postHtml += '<span><a href="user.html?user=' + post.username + '">' + post.username + '</a></span>';
+              postHtml += '</div>';
+              postHtml += '<p class="post-content">' + post.content + '</p>';
+              postHtml += '</div>';
+              $('#content').append(postHtml);
+            }
+          });
+        });
+      })
+    </script>
+</body>
+
+</html>

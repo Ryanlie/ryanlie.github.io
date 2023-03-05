@@ -32,55 +32,26 @@
     <a href="about.html" class="right">About</a>
   </nav>
 
-  <div class="content">
-    <div class="post">
-      <div class="poster">
-        <img src="img/plane_w.svg" width="30px" height="30px">
-        <span>Poster Name</span>
-      </div>
-      <div class="card-content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at non, alias minus a impedit
-        exercitationem, eos placeat veritatis temporibus repellendus expedita suscipit. Consectetur beatae reprehenderit
-        quo, ducimus sint earum.
-      </div>
-    </div>
-
-    <div class="post">
-      <div class="poster">
-        <img src="img/plane_w.svg" width="30px" height="30px">
-        <span>Poster Name</span>
-      </div>
-      <div class="card-content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at non, alias minus a impedit
-        exercitationem, eos placeat veritatis temporibus repellendus expedita suscipit. Consectetur beatae reprehenderit
-        quo, ducimus sint earum.
-      </div>
-    </div>
-
-    <div class="post">
-      <div class="poster">
-        <img src="img/plane_w.svg" width="30px" height="30px">
-        <span>Poster Name</span>
-      </div>
-      <div class="card-content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at non, alias minus a impedit
-        exercitationem, eos placeat veritatis temporibus repellendus expedita suscipit. Consectetur beatae reprehenderit
-        quo, ducimus sint earum.
-      </div>
-    </div>
-
-    <div class="post">
-      <div class="poster">
-        <img src="img/plane_w.svg" width="30px" height="30px">
-        <span>Poster Name</span>
-      </div>
-      <div class="card-content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at non, alias minus a impedit
-        exercitationem, eos placeat veritatis temporibus repellendus expedita suscipit. Consectetur beatae reprehenderit
-        quo, ducimus sint earum.
-      </div>
-    </div>
+  <div id="content">
+    <!-- Populated using jQuery from "post-data.json" -->
   </div>
+
+  <script>
+    $(document).ready(() => {
+      $.getJSON('post-data.json', (data) => {
+        $.each(data, (index, post) => {
+          var postHtml = '<div class="post">';
+          postHtml += '<div class="poster-info">';
+          postHtml += '<img src="img/plane_w.svg" width="30px" height="30px" />';
+          postHtml += '<span><a href="user.html?user=' + post.username + '">' + post.username + '</a></span>';
+          postHtml += '</div>';
+          postHtml += '<p class="post-content">' + post.content + '</p>';
+          postHtml += '</div>';
+          $('#content').append(postHtml);
+        });
+      });
+    })
+  </script>
 </body>
 
 </html>

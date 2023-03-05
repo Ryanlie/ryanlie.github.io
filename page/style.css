@@ -36,7 +36,11 @@ a:hover {
   text-decoration: underline;
 }
 
-.content {
+.infobox .poster span {
+  font-size: 150%;
+}
+
+#content {
   margin: auto;
   width: 70ch;
   overflow-y: scroll;
@@ -51,12 +55,12 @@ a:hover {
   overflow: wrap;
 }
 
-.poster img {
+.poster-info img {
   vertical-align: middle;
   border-radius: 50%;
   border: 1px white solid;
 }
-.poster span {
+.poster-info span a {
   vertical-align: middle;
   text-decoration: underline;
 }

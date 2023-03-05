@@ -37,9 +37,13 @@ a {
 	}
 }
 
-.
+.infobox {
+	.poster span {
+		font-size: 150%;
+	}
+}
 
-.content {
+#content {
 	margin: auto;
 	width: 70ch;
 	overflow-y: scroll;
@@ -54,14 +58,15 @@ a {
 	overflow: wrap;
 }
 
-.poster {
+.poster-info {
 	img {
 		vertical-align: middle;
 		border-radius: 50%;
 		border: 1px white solid;
 	}
 
-	span {
+	span a{
+		// color: #ffffff;
 		vertical-align: middle;
 		text-decoration: underline;
 	}
